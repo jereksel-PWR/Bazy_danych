@@ -1,0 +1,26 @@
+1. SELECT ProductName, CategoryName FROM `products` INNER JOIN categories WHERE products.CategoryID = categories.CategoryID AND ProductName LIKE "%p" AND CategoryName LIKE "c%"
+
+2. SELECT ProductName, UnitPrice FROM `products` WHERE UnitPrice = '20.00' OR UnitPrice = '50.00' OR UnitPrice = NULL
+
+3. SELECT ProductID, ProductName, CategoryName, UnitPrice FROM `products` INNER JOIN categories WHERE products.CategoryID = categories.CategoryID ORDER BY CategoryName DESC, UnitPrice ASC 
+
+4. SELECT Region, CompanyName FROM `suppliers` WHERE Region != ''
+
+5. SELECT OrderID, UnitPrice*Quantity AS 'kwota przy zamówieniu' FROM order_details ORDER BY `kwota przy zamówieniu` ASC LIMIT 5
+
+6. SELECT ProductID from order_details GROUP BY ProductID HAVING (SUM(Quantity)/COUNT(ProductID)) > 2 
+
+7. SELECT LastName, OrderID FROM employees INNER JOIN orders WHERE employees.EmployeeID=orders.EmployeeID WHERE OrderDate < 1998-01-23
+
+8. SELECT orders.CustomerID, OrderDate FROM orders RIGHT OUTER JOIN customers ON orders.CustomerID = customers.CustomerID
+
+9. SELECT * FROM `suppliers`,`shippers` WHERE suppliers.CompanyName LIKE 's%' AND shippers.CompanyName LIKE 's%'
+
+10. SELECT products.ProductName, orders.OrderDate FROM order_details INNER JOIN products ON products.ProductID = order_details.ProductID INNER JOIN orders ON order_details.OrderID = orders.OrderID 
+
+11.
+
+12. SELECT CustomerID, ProductName, Quantity*order_details.UnitPrice AS 'suma kwot zamówień' FROM orders INNER JOIN order_details ON orders.OrderID = order_details.OrderID INNER JOIN products ON order_details.ProductID = products.ProductID
+
+13. SELECT ProductID, MIN(Quantity) AS "Najmniejsza ilość zamówień" FROM order_details GROUP BY order_details.ProductID ORDER BY `ProductID` ASC 
+

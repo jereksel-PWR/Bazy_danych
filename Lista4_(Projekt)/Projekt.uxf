@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>464</y>
+      <w>160</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Użytkownik
+--
+_ID: int_
+Nick: varchar(40)
+Hasło: varchar(32)
+Imię: varchar(40)
+Nazwisko: varchar(40)
+E-mail: varchar(50)
+Ulica: varchar(50)
+Miasto: varchar(50)
+Numer telefonu: varchar(12)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>456</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Aukcja
+--
+_ID: int_
+ID użytkownika: int
+ID zwycięzcy: int
+Tytuł: varchar(40)
+Sposoby dostawy: text
+Opis: text
+Zdjęcie: image
+Kwota: int
+Data wystawienia: datetime
+Data zakończenia: datetime
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>224</y>
+      <w>184</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Wiadomość prywatna
+--
+_ID: int_
+ID nadawcy: int
+ID odbiorcy: int
+Tytuł: varchar(40)
+Opis: text
+Data wysłania: datetime
+Data odebrania: datetime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>440</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Płatność
+--
+_ID: int_
+ID aukcji: int
+ID sposobu płatności: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>224</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Sposób dostawy
+--
+_ID: int_
+Nazwa: varchar(40)
+Opis: text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>232</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Sposób płatności
+--
+_ID: int_
+Nazwa: varchar(40)
+Opis: text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>352</y>
+      <w>40</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=2
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>336</y>
+      <w>40</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>592</x>
+      <y>480</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>472</y>
+      <w>176</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>344</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>296</x>
+      <y>576</y>
+      <w>432</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1,2</panel_attributes>
+    <additional_attributes>10.0;10.0;520.0;10.0</additional_attributes>
+  </element>
+</diagram>
